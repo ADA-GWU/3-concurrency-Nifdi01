@@ -4,23 +4,21 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class DisplayFrame {
-    private JFrame frame;
+class DisplayFrame {
+    private static JFrame frame;
+    
+    public static void displayFrame(BufferedImage image) {
+        if (frame == null) {
+            frame = new JFrame("Image Processing");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(image.getWidth(), image.getHeight());
 
-    public void createFrame(BufferedImage image){
-        frame = new JFrame("Image Processor");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(image.getWidth(), image.getHeight());
+            JLabel label = new JLabel(new ImageIcon(image));
+            frame.add(label);
 
-        JLabel label = new JLabel(new ImageIcon(image));
-        frame.add(label);
-        frame.setVisible(true);
-    }
-
-    public void updateImage(BufferedImage image) {
-        if(frame != null){
-            JLabel label = (JLabel) frame.getContentPane().getComponent(0);
-            label.setIcon(new ImageIcon(image));
+            frame.setVisible(true);
+        } else {
+            ((ImageIcon) ((JLabel) frame.getContentPane().getComponent(0)).getIcon()).setImage(image);
             frame.repaint();
         }
     }
