@@ -8,7 +8,7 @@ The program utilizes Java’s standard libraries to handle image manipulation, G
 
 ## Tools Used
 
-The program leverages several Java libraries and techniques:
+The program uses several Java libraries and techniques:
 
 1. **Java AWT (Abstract Window Toolkit)**:
    - `BufferedImage`: Used for loading and manipulating image data.
@@ -80,7 +80,7 @@ java Main image.jpg 20 M
 
 ## Example Image
 
-Here is an example of how you might link to an image within your documentation:
+Here is an example image that can be obtained using the program. There is no difference in the final result between single-threaded and multi-threaded approach, but the latter will be faster.
 
 <p align="middle">
   <img src="readme_images/image.jpg" width="35%" />
