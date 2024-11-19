@@ -83,8 +83,8 @@ java Main image.jpg 20 M
 Here is an example of how you might link to an image within your documentation:
 
 <p align="middle">
-  <img src="./image.jpg" width="35%" />
-  <img src="./result.jpg" width="35%" /> 
+  <img src="readme_images/image.jpg" width="35%" />
+  <img src="readme_images/result.jpg" width="35%" /> 
 </p>
 
 
